@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tecalaz</title>
+
+  <!-- Favicons
+  ================================================== -->
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="home-page" cz-shortcut-listen="true">
+  <!-- Side Menu -->
+	<section class="rst-sidemenu">
+		<nav class="rst-topmenu">
+			<ul>
+				<li><a href="/">home</a></li>
+				<li><a href="/about">about</a></li>
+				<li><a href="/services">services</a></li>
+        <li><a href="/clients">clients</a></li>
+				<li><a href="/contact">contact</a></li>
+			</ul>
+		</nav>
+	</section>
+	<!-- End Side Menu -->
+
+	<!--- Wrapper -->
+	<section class="wrapper">
+
+<%= render "shared/header" %>
+<%= yield %>
+<%= render "shared/footer" %>
+
+	</section>
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>
